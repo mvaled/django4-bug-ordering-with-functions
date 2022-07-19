@@ -5,7 +5,7 @@ class ModelA(models.Model):
     name = models.CharField(max_length=1024)
 
     class Meta:
-        ordering = ('name', )
+        ordering = (models.functions.Lower('name'), )
 
 
 class ModelB(models.Model):
